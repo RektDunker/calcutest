@@ -6,6 +6,8 @@ public class Main {
         String str = sc.nextLine();
         String[] smv = str.split(" ");
         int r = 0;
+        if (smv.length > 3)
+            throw new RuntimeException();
         if (smv[0].equals("1") || smv[0].equals("2") || smv[0].equals("3") || smv[0].equals("4") || smv[0].equals("5") || smv[0].equals("6") || smv[0].equals("7") || smv[0].equals("8") || smv[0].equals("9") || smv[0].equals("10"))
             if (smv[2].equals("1") || smv[2].equals("2") || smv[2].equals("3") || smv[2].equals("4") || smv[2].equals("5") || smv[2].equals("6") || smv[2].equals("7") || smv[2].equals("8") || smv[2].equals("9") || smv[2].equals("10"))
                 r = 1;
@@ -18,8 +20,6 @@ public class Main {
                     if (!smv[2].equals("I") && !smv[2].equals("II") && !smv[2].equals("III") && !smv[2].equals("IV") && !smv[2].equals("V") && !smv[2].equals("VI") && !smv[2].equals("VII") && !smv[2].equals("VIII") && !smv[2].equals("IX") && !smv[2].equals("X"))
                         throw new RuntimeException();
         if (!smv[1].equals("+") && !smv[1].equals("-") && !smv[1].equals("/") && !smv[1].equals("*"))
-            r = 0;
-        if (smv.length > 3)
             r = 0;
         if (r == 0)
             throw new RuntimeException();
