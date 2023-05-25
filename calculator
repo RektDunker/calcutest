@@ -1,0 +1,134 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String[] smv = str.split(" ");
+        int r = 0;
+        if (smv[0].equals("1") || smv[0].equals("2") || smv[0].equals("3") || smv[0].equals("4") || smv[0].equals("5") || smv[0].equals("6") || smv[0].equals("7") || smv[0].equals("8") || smv[0].equals("9") || smv[0].equals("10"))
+            if (smv[2].equals("1") || smv[2].equals("2") || smv[2].equals("3") || smv[2].equals("4") || smv[2].equals("5") || smv[2].equals("6") || smv[2].equals("7") || smv[2].equals("8") || smv[2].equals("9") || smv[2].equals("10"))
+                r = 1;
+        if (smv[0].equals("I") || smv[0].equals("II") || smv[0].equals("III") || smv[0].equals("IV") || smv[0].equals("V") || smv[0].equals("VI") || smv[0].equals("VII") || smv[0].equals("VIII") || smv[0].equals("IX") || smv[0].equals("X"))
+            if (smv[2].equals("I") || smv[2].equals("II") || smv[2].equals("III") || smv[2].equals("IV") || smv[2].equals("V") || smv[2].equals("VI") || smv[2].equals("VII") || smv[2].equals("VIII") || smv[2].equals("IX") || smv[2].equals("X"))
+                r = 2;
+        if (!smv[0].equals("1") && !smv[0].equals("2") && !smv[0].equals("3") && !smv[0].equals("4") && !smv[0].equals("5") && !smv[0].equals("6") && !smv[0].equals("7") && !smv[0].equals("8") && !smv[0].equals("9") && !smv[0].equals("10"))
+            if (!smv[0].equals("I") && !smv[0].equals("II") && !smv[0].equals("III") && !smv[0].equals("IV") && !smv[0].equals("V") && !smv[0].equals("VI") && !smv[0].equals("VII") && !smv[0].equals("VIII") && !smv[0].equals("IX") && !smv[0].equals("X"))
+                if (!smv[2].equals("1") && !smv[2].equals("2") && !smv[2].equals("3") && !smv[2].equals("4") && !smv[2].equals("5") && !smv[2].equals("6") && !smv[2].equals("7") && !smv[2].equals("8") && !smv[2].equals("9") && !smv[2].equals("10"))
+                    if (!smv[2].equals("I") && !smv[2].equals("II") && !smv[2].equals("III") && !smv[2].equals("IV") && !smv[2].equals("V") && !smv[2].equals("VI") && !smv[2].equals("VII") && !smv[2].equals("VIII") && !smv[2].equals("IX") && !smv[2].equals("X"))
+                        System.out.println("ошибка");
+        if (!smv[1].equals("+") && !smv[1].equals("-") && !smv[1].equals("/") && !smv[1].equals("*"))
+            r = 0;
+        if (smv.length > 3)
+            r = 0;
+        if (r == 0)
+            System.out.println("ошибка");
+        if (r == 2) {
+            if (smv[0].equals("I"))
+                smv[0] = "1";
+            if (smv[0].equals("II"))
+                smv[0] = "2";
+            if (smv[0].equals("III"))
+                smv[0] = "3";
+            if (smv[0].equals("IV"))
+                smv[0] = "4";
+            if (smv[0].equals("V"))
+                smv[0] = "5";
+            if (smv[0].equals("VI"))
+                smv[0] = "6";
+            if (smv[0].equals("VII"))
+                smv[0] = "7";
+            if (smv[0].equals("VIII"))
+                smv[0] = "8";
+            if (smv[0].equals("IX"))
+                smv[0] = "9";
+            if (smv[0].equals("X"))
+                smv[0] = "10";
+
+            if (smv[2].equals("I"))
+                smv[2] = "1";
+            if (smv[2].equals("II"))
+                smv[2] = "2";
+            if (smv[2].equals("III"))
+                smv[2] = "3";
+            if (smv[2].equals("IV"))
+                smv[2] = "4";
+            if (smv[2].equals("V"))
+                smv[2] = "5";
+            if (smv[2].equals("VI"))
+                smv[2] = "6";
+            if (smv[2].equals("VII"))
+                smv[2] = "7";
+            if (smv[2].equals("VIII"))
+                smv[2] = "8";
+            if (smv[2].equals("IX"))
+                smv[2] = "9";
+            if (smv[2].equals("X"))
+                smv[2] = "10";
+        }
+        int n1 = Integer.parseInt(smv[0]);
+        int n2 = Integer.parseInt(smv[2]);
+        int n3 = 0;
+        if (smv[1].equals("+"))
+            n3 = n1 + n2;
+        if (smv[1].equals("-"))
+            n3 = n1 - n2;
+        if (smv[1].equals("/"))
+            n3 = n1 / n2;
+        if (smv[1].equals("*"))
+            n3 = n1 * n2;
+
+        if (r == 1)
+            System.out.println(n3);
+        String n5 = "";
+        if (r == 2 && n3 > 0)
+        {
+            int n4 = n3 / 10;
+            int n41 = n3 % 10;
+            if (n4 == 1)
+                n5 = n5 + "X";
+            if (n4 == 2)
+                n5 = n5 + "XX";
+            if (n4 == 3)
+                n5 = n5 + "XXX";
+            if (n4 == 4)
+                n5 = n5 + "XL";
+            if (n4 == 5)
+                n5 = n5 + "L";
+            if (n4 == 6)
+                n5 = n5 + "LX";
+            if (n4 == 7)
+                n5 = n5 + "LXX";
+            if (n4 == 8)
+                n5 = n5 + "LXXX";
+            if (n4 == 9)
+                n5 = n5 + "XC";
+            if (n4 == 10)
+                n5 = n5 + "C";
+
+            if (n41 == 1)
+                n5 = n5 + "I";
+            if (n41 == 2)
+                n5 = n5 + "II";
+            if (n41 == 3)
+                n5 = n5 + "III";
+            if (n41 == 4)
+                n5 = n5 + "IV";
+            if (n41 == 5)
+                n5 = n5 + "V";
+            if (n41 == 6)
+                n5 = n5 + "VI";
+            if (n41 == 7)
+                n5 = n5 + "VII";
+            if (n41 == 8)
+                n5 = n5 + "VIII";
+            if (n41 == 9)
+                n5 = n5 + "IX";
+            System.out.println(n5);
+        }
+        if (r == 2 && n3 < 1)
+            System.out.println("ошибка");
+        // Press Shift+F9 to start debugging your code. We have set one breakpoint
+        // for you, but you can always add more by pressing Ctrl+F8.
+    }
+}
