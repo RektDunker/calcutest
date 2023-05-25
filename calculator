@@ -16,7 +16,7 @@ public class Main {
             if (!smv[0].equals("I") && !smv[0].equals("II") && !smv[0].equals("III") && !smv[0].equals("IV") && !smv[0].equals("V") && !smv[0].equals("VI") && !smv[0].equals("VII") && !smv[0].equals("VIII") && !smv[0].equals("IX") && !smv[0].equals("X"))
                 if (!smv[2].equals("1") && !smv[2].equals("2") && !smv[2].equals("3") && !smv[2].equals("4") && !smv[2].equals("5") && !smv[2].equals("6") && !smv[2].equals("7") && !smv[2].equals("8") && !smv[2].equals("9") && !smv[2].equals("10"))
                     if (!smv[2].equals("I") && !smv[2].equals("II") && !smv[2].equals("III") && !smv[2].equals("IV") && !smv[2].equals("V") && !smv[2].equals("VI") && !smv[2].equals("VII") && !smv[2].equals("VIII") && !smv[2].equals("IX") && !smv[2].equals("X"))
-                        System.out.println("ошибка");
+                        throw new RuntimeException();
         if (!smv[1].equals("+") && !smv[1].equals("-") && !smv[1].equals("/") && !smv[1].equals("*"))
             r = 0;
         if (smv.length > 3)
@@ -127,7 +127,7 @@ public class Main {
             System.out.println(n5);
         }
         if (r == 2 && n3 < 1)
-            System.out.println("ошибка");
+            throw new RuntimeException();
         // Press Shift+F9 to start debugging your code. We have set one breakpoint
         // for you, but you can always add more by pressing Ctrl+F8.
     }
