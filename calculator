@@ -22,7 +22,7 @@ public class Main {
         if (smv.length > 3)
             r = 0;
         if (r == 0)
-            System.out.println("ошибка");
+            throw new RuntimeException();;
         if (r == 2) {
             if (smv[0].equals("I"))
                 smv[0] = "1";
