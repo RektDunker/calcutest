@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
+        String st = sc.nextLine();
+        System.out.println(calc(st));
+    }
+
+    public static String calc (String str){
         String[] smv = str.split(" ");
         int r = 0;
         if (smv.length > 3)
@@ -79,7 +83,7 @@ public class Main {
             n3 = n1 * n2;
 
         if (r == 1)
-            System.out.println(n3);
+            return String.valueOf(n3);
         String n5 = "";
         if (r == 2 && n3 > 0)
         {
@@ -124,11 +128,10 @@ public class Main {
                 n5 = n5 + "VIII";
             if (n41 == 9)
                 n5 = n5 + "IX";
-            System.out.println(n5);
+            return n5;
         }
         if (r == 2 && n3 < 1)
             throw new RuntimeException();
-        // Press Shift+F9 to start debugging your code. We have set one breakpoint
-        // for you, but you can always add more by pressing Ctrl+F8.
+        return "0";
     }
 }
